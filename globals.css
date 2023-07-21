@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+/* 
+    bg color: #15202b
+    light white: #f0f2f2
+    opacity white: #818e9b
+*/
+
+button * {
+    pointer-events: none;
+}
+
+/* .hero{
+    @apply text-ellipsis text-ellipsis bg-neutral-800 p-2
+} */
+
+.showMenu {
+    animation-name: showMenu;
+    animation-duration: .25s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.hideMenu {
+    animation-name: hideMenu;
+    animation-duration: .25s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+}
+
+@keyframes showMenu {
+    from {
+        bottom: -10%;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes hideMenu {
+    from {
+        bottom: 0;
+        opacity: 1;
+    }
+
+    to {
+        bottom: -10%;
+        opacity: 0;
+    }
+}
